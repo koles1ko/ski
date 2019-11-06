@@ -1,14 +1,21 @@
-$(function(){
+$(document).ready(function () {
 
-  // $('.menu__btn').on('click', function(){
+  $('.slider__wrapper').slick({
+    arrows: false,
+    dots: true,
+  });
+
+});
+   // $('.menu__btn').on('click', function(){
   //   $('.menu__list').slideToggle();
   // }); Для бургера!
 
-  //   $('.class').slick({
+  //   $('.testi__slider').slick({
   //   dots: true,
   //   arrows: false,
-  //   slidesToShow: 4,
-  //   slidesToScroll: 4,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   centerMode: true,
   // }); Обычный одиночный слайдер!
 
 	//  $('.slider-for').slick({
@@ -37,4 +44,3 @@ $(function(){
   //   return false;
   // }); Для табов!
 
-});

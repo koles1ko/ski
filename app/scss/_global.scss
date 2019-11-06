@@ -33,6 +33,7 @@ body {
   font-size: 16px;
   // line-height:;
   color: $grey;
+  background-color: #f6f6f6;
 }
 .wrapper{
   display: flex;
@@ -58,4 +59,29 @@ body {
   color: #fefefe;
   font-size: 18px;
   text-transform: uppercase;
+}
+.section-title{
+  @include cat-black;
+  color: $dark;
+  font-size: 60px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  text-align: center;
+}
+.item-title{
+  @include cat-black;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.24px;
+  color: $dark;
+}
+.item-suptitle{
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: .14px;
+}
+.section-items{
+  display: flex;
+  justify-content: space-between;
 }
