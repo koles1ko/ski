@@ -4,11 +4,11 @@ $(document).ready(function () {
     arrows: false,
     dots: true,
   });
-
+  $('.header__burger').on('click', function(){
+      $('.header__menu').slideToggle();
+    }); //Для бургера!
 });
-   // $('.menu__btn').on('click', function(){
-  //   $('.menu__list').slideToggle();
-  // }); Для бургера!
+   
 
   //   $('.testi__slider').slick({
   //   dots: true,

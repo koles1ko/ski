@@ -16,6 +16,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     margin-bottom: 40px;
   }  
   &__menu{
@@ -88,7 +89,7 @@
   }
   &__info{
     position: relative;
-    z-index: 6;
+    z-index: 10;
     max-width: 660px;
     margin-top: 100px;
   }
@@ -101,8 +102,59 @@
   &__btn{
     padding: 20px 55px;
     margin-top: 50px;
+    position: relative;
+    transition: all .5s;
+    overflow: hidden;
+    background-color: transparent;
+    color: #fff;
+    z-index: 11;
+    &::before,
+    &::after{
+      position: absolute;
+      content: '';
+      left:0;
+      right:0;
+      top:0;
+      bottom: 0;
+      height: 100%;
+      background: #0b42a5;
+      border-radius: 6px;
+      transform: translate3D(0,-101%,0);
+      transition: all .5s;
+    }
+    &::before{
+      background: #ff690f;
+      z-index: -2;
+      transform: translate3D(0,0,0);
+    }
+    &:hover::after{
+      transform: translate3D(0,0,0);
+      z-index: -1;
+    }
+  }
+  &__burger{
+    display: none;
+    &-title{
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 20px;
+      @include cat-bold;
+      margin-right: 20px;
+    }
+    &-lines{
+      div{
+        width: 50px;
+        height: 5px;
+        background-color: #fff;
+        border-radius: 2px;
+        & + div{
+          margin-top: 10px;
+        }
+      }
+    }
   }
 }
+
 .offer{
   padding-bottom: 100px;
   margin-bottom: 60px;
@@ -432,3 +484,5 @@
     }
   }
 }
+
+@import 'media';
