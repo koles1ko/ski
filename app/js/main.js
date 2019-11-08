@@ -5,7 +5,7 @@ $(document).ready(function () {
     dots: true,
   });
   $('.header__burger').on('click', function(){
-      $('.header__menu').slideToggle();
+      $('.header__menu-list').slideToggle();
     }); //Для бургера!
 });
    

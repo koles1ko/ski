@@ -303,7 +303,7 @@
 @media (max-width: 380px){
   .header{
     &_top{
-      justify-content: center;
+      justify-content: flex-end;
       margin-bottom: 20px;
     }
     &__menu-list{
