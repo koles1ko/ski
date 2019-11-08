@@ -18,7 +18,67 @@
       max-width: 450px;
     }
   }
-
+  .school{
+    &__info{
+      padding-top: 20px;
+    }
+  }
+  .footer{
+    display: flex;
+    align-items: flex-end;
+    background-position: center;
+    .contacts{
+      height: 310px;
+      max-width: 100%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    &__info{
+      max-width: 100%;
+      margin-top: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      // flex-direction: row-reverse;
+    }
+    &__info-inner{
+      padding: 0 50px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      max-width: 100%;
+    }
+    &__phone,
+    &__map,
+    &__mail,
+    &__hours{
+      &::before{
+        top: 17px;
+      }
+    }
+    &__item{
+      margin-right: 50px;
+      padding: 14px 0;
+      & + & {
+        margin-top: 0;
+      }
+    }
+    &__social{
+      margin-top: 17px;
+      max-width: 100px;
+      text-align: center;
+      width: 100%;
+      
+      li{
+        display: block;
+        & + li{
+          margin-left: 0;
+          margin-top: 50px;
+        }
+      }
+    }
+  }
 }
 @media (max-width: 1100px){
   .crew{
@@ -110,6 +170,28 @@
     }
   }
 }
+@media (max-width: 800px){
+  .crew{
+    padding-bottom: 0;
+  }.school{
+    &__title{
+      font-size: 40px;
+      text-align: center;
+    }
+    &__desc{
+      text-align: center;
+    }
+    .stats-item{
+      display: block;
+      text-align: center;
+      & + .stats-item{
+        margin-left: 0;
+        margin-top: 10px;
+
+      }
+    }
+  }
+}
 @media (max-width: 780px){
   .header{
     &__info{
@@ -138,6 +220,19 @@
       font-size: 18px;
     }
   }
+  .footer{
+    .contacts{
+      min-height: 360px;
+    }
+  }
+}
+@media (max-width: 640px){
+  .gallery{
+    flex-wrap: wrap;
+    &_column{
+      width: 100%;
+    }
+  }
 }
 @media (max-width: 550px){
   .header{
@@ -151,6 +246,26 @@
     }
     &__title{
       font-size: 45px;
+    }
+  }
+  .footer{
+    height: 800px;
+    .contacts{
+      min-height: 500px;
+    }
+    &__info{
+      display: block;
+    }
+    &__social{
+      max-width: none;
+      margin-left: 0;
+      li{
+        display: inline-block;
+        + li{
+          margin-top: 0;
+          margin-left: 37px;
+        }
+      }
     }
   }
 }
@@ -179,6 +294,11 @@
       }
     }
   }
+  .testi{
+    .section-title{
+      font-size: 40px;
+    }
+  }
 }
 @media (max-width: 380px){
   .header{
@@ -205,6 +325,12 @@
     &__title{
       font-size: 30px;
       margin-top: 60px;
+    }
+  }
+  .footer{
+    height: 900px;
+    .contacts{
+      min-height: 560px;
     }
   }
 }
