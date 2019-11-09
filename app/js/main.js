@@ -7,6 +7,8 @@ $(document).ready(function () {
   $('.header__burger').on('click', function(){
       $('.header__menu-list').slideToggle();
     }); //Для бургера!
+
+    new WOW().init();
 });
    
 

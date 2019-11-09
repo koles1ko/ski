@@ -66,16 +66,19 @@
     height: 685px;
     z-index: 1;
     bottom: 25px;
+    // animation-delay: 1s;
   }
   .heel{
     height: 292px;
     z-index: 2;
+    animation-delay: 1s;
   }
   .snow{
     z-index: 3;
     width: 100%;
     min-height: 112px;
     background: linear-gradient(to top, #f7f7f7 0%, #f8fafa 85%, transparent 100%);
+    
   }
   .boarder{
     height: 750px;
@@ -84,6 +87,7 @@
     left: auto;
     bottom: 0;
     z-index: 5;
+    animation-delay: 2s;
   }
   &__info{
     position: relative;

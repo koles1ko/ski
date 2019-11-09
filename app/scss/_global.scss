@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 *, 
 *::after,
@@ -42,6 +43,7 @@ body {
 }
 .content{
   flex: 1 0 auto;
+  // overflow: hidden;
 }
 .footer{
   flex: 0 0 auto;

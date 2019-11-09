@@ -22,13 +22,14 @@ gulp.task('script', function() {
   return gulp.src([
     'node_modules/slick-carousel/slick/slick.js',
     'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
-    'node_modules/fancybox/dist/js/jquery.fancybox.js'
+    'node_modules/fancybox/dist/js/jquery.fancybox.js',
+    'node_modules/wow.js/dist/wow.min.js'
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('app/js'))
 });
-gulp.task('script', function() {
+gulp.task('script-js', function() {
   return gulp.src(['app/js/**/*.js'])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
@@ -41,7 +42,8 @@ gulp.task('style', function() {
     'node_modules/normalize.css/normalize.css',
     'node_modules/slick-carousel/slick/slick.css',
     'node_modules/magnific-popup/dist/magnific-popup.css',
-    'node_modules/fancybox/dist/css/jquery.fancybox.css'
+    'node_modules/fancybox/dist/css/jquery.fancybox.css',
+    'node_modules/animate.css/animate.min.css'
   ])
     .pipe(concat('libs.min.css'))
     .pipe(cssmin())
@@ -72,4 +74,4 @@ gulp.task('watch', function () {
   gulp.watch('app/js/*.js', gulp.parallel('js'))
 });
 
-gulp.task('default', gulp.parallel('sass', 'watch', 'browser-sync', 'script', 'style'))
+gulp.task('default', gulp.parallel('sass', 'watch', 'browser-sync', 'script', 'script-js', 'style'))
